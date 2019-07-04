@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">MyWorkingSpace</string>
+  <string name="no_of_like">%d Likes</string>
+  <string name="center_name_loc">%s, %s</string>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/padding_small"
+    android:layout_marginLeft="@dimen/padding_medium"
+    android:layout_marginRight="@dimen/padding_medium"
+    android:layout_marginTop="@dimen/padding_small"
+    android:background="@android:color/white"
+    android:elevation="3dp"
+    app:cardCornerRadius="3dp"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/padding_medium"
+      >
+
+    <ImageView
+        android:id="@+id/img_creator"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="@dimen/padding_medium"
+        />
+
+    <TextView
+        android:id="@+id/tv_creator_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_creator"
+        android:padding="@dimen/padding_xsmall"
+        android:textColor="@color/color_text_black"
+        android:textStyle="bold"
+        tools:text="Creator Name"
+        />
+
+    <TextView
+        android:id="@+id/tv_creator_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_creator_name"
+        android:layout_toRightOf="@id/img_creator"
+        android:padding="@dimen/padding_xsmall"
+        android:textColor="@color/color_grey_dark"
+        tools:text="Name of creator"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_creator"
+        android:padding="@dimen/padding_small"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/color_content"
+        tools:text="This is the text which will be dispalayed in content"
+        />
+
+    <ImageView
+        android:id="@+id/img_content_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="240dp"
+        android:scaleType="fitXY"
+        />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/img_content_image"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_medium"
+        android:background="@color/color_light_grey"
+        />
+
+    <LinearLayout
+
+        android:id="@+id/ll_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_xsmall"
+        android:weightSum="3"
+        >
+
+      <ImageView
+          android:id="@+id/img_heart"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start|center_vertical"
+          android:layout_weight=".5"
+          android:maxHeight="32dp"
+          android:src="@drawable/ic_heart_outline_grey"
+          />
+      <ImageView
+          android:id="@+id/img_comment"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start|center_vertical"
+          android:layout_weight=".5"
+          android:src="@drawable/ic_comment_outline_grey"
+          />
+      <TextView
+          android:id="@+id/tv_center_name"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:gravity="center|end"
+          android:padding="@dimen/padding_small"
+          android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+          android:textColor="@color/color_grey_text_background"
+          tools:text="cowrks Chennai"
+          />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_no_of_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ll_options"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:textColor="@color/color_grey_text_background"
+        android:textSize="@dimen/font_small"
+        />
+
+  </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
